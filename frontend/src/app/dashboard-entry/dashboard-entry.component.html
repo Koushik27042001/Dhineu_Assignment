@@ -1,0 +1,41 @@
+<div class="p-6 bg-gray-800 shadow-lg rounded-lg">
+    <h4 class="mb-4">{{ user.id ? 'Edit User' : 'Add User' }}</h4>
+    <div class="mb-4">
+        <mat-form-field class="w-full">
+            <mat-label>Username</mat-label>
+            <input matInput [(ngModel)]="user.username" required />
+        </mat-form-field>
+    </div>
+    <div class="mb-4">
+        <mat-form-field class="w-full">
+            <mat-label>Password</mat-label>
+            <input matInput [(ngModel)]="user.password" type="password" required />
+        </mat-form-field>
+    </div>
+    <div class="mb-4">
+        <mat-form-field class="w-full">
+            <mat-label>Full name</mat-label>
+            <input matInput [(ngModel)]="user.fullname" required />
+        </mat-form-field>
+    </div>
+    <div class="mb-4">
+        <mat-form-field class="w-full">
+            <mat-label>Mobile number</mat-label>
+            <input matInput [(ngModel)]="user.mobileno" type="tel" required />
+        </mat-form-field>
+    </div>
+
+    <div class="flex justify-end space-x-4">
+        <!-- Cancel Button -->
+        <button mat-button (click)="onCancel()"
+            class="bg-red-500 text-white hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 rounded px-4 py-2">
+            Cancel
+        </button>
+
+        <!-- Save Button -->
+        <button mat-raised-button color="primary" (click)="onSave()">
+            Save
+        </button>
+    </div>
+
+</div>

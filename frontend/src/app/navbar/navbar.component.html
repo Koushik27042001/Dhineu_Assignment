@@ -1,0 +1,27 @@
+<div class="p-5 h-full pr-2 border-r-2 border-gray-200 overflow-y-auto bg-gray-800 text-white custom-scroll">
+    <!-- Active User Info -->
+    <div class="mt-4" *ngIf="showLogoutButton">
+        <div class="flex pb-2">
+            <p class="font-medium text-gray-300">Username</p>
+        </div>
+        <p class="pl-2 border-l-2 border-yellow-500">
+            {{username}}
+        </p>
+    </div>
+
+    <!-- Other User Info (Add more fields as needed) -->
+    <div class="mt-6">
+        <div class="flex pb-2">
+            <p class="font-medium text-gray-300">Active User</p>
+        </div>
+        <p class="pl-2 border-l-2 border-yellow-500">
+            {{ activeTokenCount }}
+        </p>
+    </div>
+
+    <!-- Logout Button -->
+    <div class="mt-6" *ngIf="showLogoutButton">
+        <button mat-raised-button color="warn" class="bg-red-600 hover:bg-red-700 text-white"
+            (click)="logout()">Logout</button>
+    </div>
+</div>
